@@ -42,7 +42,6 @@ public class BaseZookeeper implements Watcher {
      */
     public void connectZookeeper(String host) throws IOException, InterruptedException {
         ZooKeeper zooKeeper = new ZooKeeper(host, SESSION_TIME_OUT, this);
-        countDownLatch.await();
         System.out.println("zookeeper connection success");
     }
 
